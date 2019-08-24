@@ -1,0 +1,33 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: springboot-export-zip
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/html/
+    suffix: .html
+    encoding: UTF-8
+
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    initial-size: 10
+    max-active: 20
+    max-idle: 8
+    min-idle: 8
+    url: jdbc:mysql://127.0.0.1:3306/bm_assess?serverTimezone=UTC
+    username: root
+    password: 123456
+#    url: jdbc:mysql://47.98.158.40:3306/bm_assess
+#    username: cvqzgcs
+#    password: cvqzgcs
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
